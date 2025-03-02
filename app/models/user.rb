@@ -22,6 +22,7 @@ class User < ApplicationRecord
   ## Direct associations
 
   # User#comments: returns rows from the comments table associated to this user by the author_id column
+  has_many(:comments, foreign_key: "author_id")
 
   # User#own_photos: returns rows from the photos table  associated to this user by the owner_id column
 
